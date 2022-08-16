@@ -1,0 +1,7 @@
+
+
+1. In the javascript provide the ip-address and the title for the app
+
+2. Customize the menu and hamburger menu items
+
+3.

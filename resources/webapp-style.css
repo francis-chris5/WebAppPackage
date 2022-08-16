@@ -1,0 +1,186 @@
+
+
+:root{
+    
+    --default-app-size: 28em;
+    --default-writing-color: #000000;
+    --default-writing-size: 10pt;
+    --default-padding: 1.2em;
+    --main-back-color: rgba(243, 243, 243, 0.95);
+    
+    --general-border: solid 1px #e8e8e8;
+    --section-border: double 8px #e8e8e8;
+    --general-border-radius: 2%;
+    
+    --logo-width: 16px;
+    --logo-right-margin: 1.5em;
+    
+    --button-back-color: rgba(243, 243, 243, 0.25);
+    --button-hover-color: #7098f5;
+    --menu-back-color: #ffffff;
+    --menu-button-padding: 0.3em;
+    --menu-cursor: default;
+    
+    --submenu-width: 10em;
+    --submenu-text-alignment: left;
+    
+    --hamburger-image-size: 32px;
+    --sidebar-width: 20%;
+    --sidebar-button-width: 88%;
+    --sidebar-button-height: 80px;
+    --sidebar-button-image-width: 34%;
+    --sidebar-button-margin: 0 0 0.75em 0;
+    
+    font-size: var(--default-writing-size);
+}
+
+
+body{
+/*    background-color: var(--main-back-color);*/
+}
+
+button{
+    font-size: var(--default-writing-size);
+    background-color: var(--main-back-color);
+    border: var(--general-border);
+    border-radius: var(--general-border-radius);
+}
+
+button:hover{
+    background-color: var(--button-hover-color);
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+
+
+
+
+/**********************  APP MAIN  *******************************/
+#main{
+    background-color: var(--main-back-color);
+    height: var(--default-app-size);
+    padding: var(--default-padding);
+    border-radius: var(--general-border-radius);
+}
+
+
+
+
+
+/**********************  MAIN MENU  ******************************/
+.logo{
+    float: left;
+    width: var(--logo-width);
+    margin-right: var(--logo-right-margin);
+}
+
+.menuButton{
+    float: left;
+    border: none;
+    background-color: var(--button-back-color);
+    padding: var(--menu-button-padding);
+}
+
+/*.menuButton:hover{
+    background-color: var(--menu-hover-color);
+}*/
+
+.dropdownMenu{
+    display: inline-block;
+    position: relative;
+}
+
+.menu{
+    display: none;
+    position: absolute;
+    top: 1.2em;
+    background-color: var(--menu-back-color);
+    padding-left: 1.2em;
+    z-index: 5;
+    width: var(--submenu-width);
+}
+
+.submenu{
+    position: relative;
+    left: -4em;
+    border: none;
+    width: var(--submenu-width);
+    text-align: var(--submenu-text-alignment);
+    background-color: var(--menu-back-color);
+}
+
+/*.submenu:hover{
+    background-color: var(--button-hover-color);
+}*/
+
+.menu ul li a{
+    background-color: var(--menu-back-color);
+    text-decoration: none;
+    color: var(--default-writing-color);
+}
+
+.menu ul li a:hover{
+    background-color: var(--button-hover-color);
+    cursor: var(--menu-cursor);
+}
+
+
+.menu hr{
+    position: relative;
+    left: -4em;
+    background-color: var(--menu-back-color);
+    width: var(--submenu-width);
+}
+
+
+.dropdownMenu:hover .menu{
+    display: block;
+}
+
+
+
+
+
+/***********************  HAMBURGER MENU  ************************/
+#hamburgerSection{
+    width: var(--sidebar-width);
+    float: left;
+}
+
+.hamburger{
+    float: left;
+    background-color: var(--button-back-color);
+    border-radius: var(--general-border-radius);
+    border: var(--general-border);
+}
+
+.hamburger img{
+    width: var(--hamburger-image-size);
+    height: var(--hamburger-image-size);
+}
+
+#sidebar{
+    margin-top: 2em;
+    display: block;
+}
+
+.sidebarButton{
+    width: var(--sidebar-button-width);
+    height: var(--sidebar-button-height);
+    margin-bottom: var(--sidebar-button-margin);
+    background-color: var(--button-back-color);
+    border-radius: var(--general-border-radius);
+    border: var(--general-border);
+}
+
+.sidebarButton:hover{
+    background-color: var(--button-hover-color);
+}
+
+.sidebarButton img{
+    width: var(--sidebar-button-image-width);
+}
