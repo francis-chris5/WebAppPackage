@@ -1,8 +1,8 @@
 # WebAppPackage
 A generic HTML-GUI starter package for web applications.
 
---initial plan to try and avoid absolute positioning did not work asynchronously, I'll have to try something else, it seems to work two out of three times, but that will probably decrease dramatically when mainContent is the largest section--
+The basic building blocks for the standard appearance of a graphical user interface in HTML5, details for the particular project loaded in asynchronously and fully responsive layout, which is also independent of the server side scripting language transmitting those details (java used in example here, only the critical source files are included here to create the project with user preferred package in user preferred IDE).
 
 
-![webapp-pic1](https://user-images.githubusercontent.com/50467171/185019436-42b17a53-4d43-4201-a2ba-56952c702dd9.png)
+![webapp-pic1](https://user-images.githubusercontent.com/50467171/185028616-afa5161c-ec70-4036-a9b0-2c6842f43df8.png)
 
