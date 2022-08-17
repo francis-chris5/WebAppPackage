@@ -25,7 +25,7 @@ function loadContent(section){
     request.send();
     request.onreadystatechange = function(){
         if(request.readyState === 4 && request.status === 200){
-            document.getElementById('main').innerHTML += request.responseText;
+            document.getElementById(section).innerHTML += request.responseText;
         }
     };
 }//end loadContent()
@@ -37,13 +37,14 @@ function loadContent(section){
 
 var sidebarShowing = true;
 function hamburger(){
+    let wide = window.matchMedia("(max-width: 900px");
     let sidebar = document.getElementById('sidebar');
-    let hamburger = document.getElementById('hamburgerSection');
+    let hamburger = document.getElementById('hamburgerMenu');
     let main = document.getElementById('mainContent');
     if(sidebarShowing){
         sidebar.style.display = "none";
         hamburger.style.maxWidth = "5%";
-        main.style.minWidth = "93%";        
+        main.style.minWidth = "90%";        
         sidebarShowing = false;
     }
     else{

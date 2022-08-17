@@ -30,7 +30,10 @@
     --sidebar-button-width: 88%;
     --sidebar-button-height: 80px;
     --sidebar-button-image-width: 34%;
+    --sidebar-top-margin: 2em;
     --sidebar-button-margin: 0 0 0.75em 0;
+    
+    --main-content-padding: 1.3em;
     
     
     --statusbar-writing-size: 0.67em;
@@ -147,7 +150,7 @@ p{
 
 
 /***********************  HAMBURGER MENU  ************************/
-#hamburgerSection{
+#hamburgerMenu{
     width: var(--sidebar-width);
     float: left;
 }
@@ -165,14 +168,14 @@ p{
 }
 
 #sidebar{
-    margin-top: 2em;
+    margin-top: var(--sidebar-top-margin);
     display: block;
 }
 
 .sidebarButton{
     width: var(--sidebar-button-width);
     height: var(--sidebar-button-height);
-    margin-bottom: var(--sidebar-button-margin);
+    margin: var(--sidebar-button-margin);
     background-color: var(--button-back-color);
     border-radius: var(--general-border-radius);
     border: var(--general-border);
@@ -189,7 +192,6 @@ p{
 
 
 
-
 /***************************  MAIN CONTENT  *************************/
 #mainContent{
     float: left;
@@ -198,12 +200,13 @@ p{
     border-top-right-radius: var(--default-border-radius);
     height: var(--default-app-size);
     width: 75%;
+    padding: var(--main-content-padding);
 }
 
 
 
 /*****************************  STATUS BAR  *************************/
-.statusbar{
+#statusBar{
     clear: both;
     display: grid;
     grid-template-columns: var(--statusbar-column-spacing);
@@ -213,17 +216,10 @@ p{
     border-top: var(--section-border);
 }
 
-/*.statusbar p{
-    padding: 0;
-    margin: 0;
-}*/
-
 #leftStatus{
     grid-area: left;
     text-align: left;
 }
-
-
 
 #middleStatus{
     grid-area: middle;
