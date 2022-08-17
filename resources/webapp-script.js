@@ -35,6 +35,11 @@ function loadContent(section){
 
 
 
+
+
+
+
+///////////////////////////////////////  HAMBURGER MENU  //////////////////////////////
 var sidebarShowing = true;
 function hamburger(){
     let wide = window.matchMedia("(max-width: 900px");
@@ -54,3 +59,49 @@ function hamburger(){
         sidebarShowing = true;
     }
 }//end hamburger()
+
+
+
+
+
+
+
+
+
+
+    //////////////////////////////////  TAB PANE  ///////////////////////////////////////
+function tabPane(event, tab){
+    let content = document.getElementsByClassName('tabPanel');
+    for(let i=0; i<content.length; i++){
+        content[i].style.display = "none";
+    }
+    document.getElementById(tab).style.display = "block";
+}//end tabPane()
+
+
+
+
+
+
+
+
+
+    ////////////////////////////////////  LIST BOX  /////////////////////////////////////
+function addItem(item){
+    document.getElementById('listBox').innerHTML = "<li onclick=\"listSelect(event)\">" + item + "</li>";
+}//end addItem()
+
+
+
+function listSelect(event){
+    if(event.button == 0 && event.target.style.backgroundColor != "rgba(112, 152, 245, 0.3)"){
+        //left click
+        event.target.style.backgroundColor = "rgba(112, 152, 245, 0.3)";
+    }
+    else{
+        event.target.style.backgroundColor = "#ffffff";
+    }
+//    else if(event.button == 2){
+//        //right click, need to override browser's right-click to use this
+//    }
+}//end listSelect()
