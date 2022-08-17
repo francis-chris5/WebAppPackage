@@ -6,5 +6,6 @@ The basic building blocks for the standard appearance of a graphical user interf
 Java, Python, and PHP examples here, only the critical source files are included here to copy and paste into a new project with desired server-side langauge in preferred IDE.
 
 
-![webapp-pic1](https://user-images.githubusercontent.com/50467171/185028616-afa5161c-ec70-4036-a9b0-2c6842f43df8.png)
+
+![webapp-pic1](https://user-images.githubusercontent.com/50467171/185144800-3621a164-5cc5-46ed-a304-464c37f65c91.png)
 
