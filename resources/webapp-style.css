@@ -6,6 +6,7 @@
     --default-writing-color: #000000;
     --default-writing-size: 10pt;
     --default-padding: 1.2em;
+    --default-border-radius: 2%;
     --main-back-color: rgba(243, 243, 243, 0.95);
     
     --general-border: solid 1px #e8e8e8;
@@ -31,6 +32,11 @@
     --sidebar-button-image-width: 34%;
     --sidebar-button-margin: 0 0 0.75em 0;
     
+    
+    --statusbar-writing-size: 0.67em;
+    --statusbar-column-spacing: 33% auto 33%;
+    --statusbar-top-padding: 1.5em;
+    
     font-size: var(--default-writing-size);
 }
 
@@ -43,7 +49,7 @@ button{
     font-size: var(--default-writing-size);
     background-color: var(--main-back-color);
     border: var(--general-border);
-    border-radius: var(--general-border-radius);
+    border-radius: var(--default-border-radius);
 }
 
 button:hover{
@@ -54,6 +60,10 @@ ul{
     list-style-type: none;
 }
 
+p{
+    margin: 0;
+    padding: 0;
+}
 
 
 
@@ -62,9 +72,8 @@ ul{
 /**********************  APP MAIN  *******************************/
 #main{
     background-color: var(--main-back-color);
-    height: var(--default-app-size);
     padding: var(--default-padding);
-    border-radius: var(--general-border-radius);
+    border-radius: var(--default-border-radius);
 }
 
 
@@ -146,7 +155,7 @@ ul{
 .hamburger{
     float: left;
     background-color: var(--button-back-color);
-    border-radius: var(--general-border-radius);
+    border-radius: var(--default-border-radius);
     border: var(--general-border);
 }
 
@@ -175,4 +184,53 @@ ul{
 
 .sidebarButton img{
     width: var(--sidebar-button-image-width);
+}
+
+
+
+
+
+/***************************  MAIN CONTENT  *************************/
+#mainContent{
+    float: left;
+    border-left: var(--section-border);
+    border-top-left-radius: var(--default-border-radius);
+    border-top-right-radius: var(--default-border-radius);
+    height: var(--default-app-size);
+    width: 75%;
+}
+
+
+
+/*****************************  STATUS BAR  *************************/
+.statusbar{
+    clear: both;
+    display: grid;
+    grid-template-columns: var(--statusbar-column-spacing);
+    grid-template-areas: "left middle right";
+    font-size: var(--statusbar-writing-size);
+    padding-top: var(--statusbar-top-padding);
+    border-top: var(--section-border);
+}
+
+/*.statusbar p{
+    padding: 0;
+    margin: 0;
+}*/
+
+#leftStatus{
+    grid-area: left;
+    text-align: left;
+}
+
+
+
+#middleStatus{
+    grid-area: middle;
+    text-align: center;
+}
+
+#rightStatus{
+    grid-area: right;
+    text-align: right;
 }
