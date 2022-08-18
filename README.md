@@ -6,6 +6,12 @@ The basic building blocks for the standard appearance of a graphical user interf
 Java, Python, and PHP examples here, only the critical source files are included here to copy and paste into a new project with desired server-side langauge in preferred IDE.
 
 
+Aside from the basic GUI Elements (main menu, hamburger menu, etc.) I have started creating a few widgets that aren't available as a single HTML element: tab-panes, list boxes, went ahead and grouped radio buttons together since they're not individual items, and a combo box since the select/option HTML elements can't be styled with CSS. The plan has the server-side script echo back detailed instances of this html code, but that's still way down the line, so a copy, paste, and modify thing for now.
 
-![webapp-pic1](https://user-images.githubusercontent.com/50467171/185144800-3621a164-5cc5-46ed-a304-464c37f65c91.png)
 
+
+![webapp-pic1](https://user-images.githubusercontent.com/50467171/185276803-1bcd1298-b107-48a6-bb3a-258cf7446319.png)
+
+![webapp-pic2](https://user-images.githubusercontent.com/50467171/185276806-48c66d46-99f1-4a2e-812c-0a64e8bead97.png)
+
+![webapp-pic3](https://user-images.githubusercontent.com/50467171/185276807-3c2ac102-0213-46c6-bd41-391df17cd2ce.png)
