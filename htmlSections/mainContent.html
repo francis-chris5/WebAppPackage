@@ -1,7 +1,4 @@
 
-<p>Customize these widgets as needed</p>
-<br>
-<br>
 
 <article class="tabPane">
     <nav class="tabs">
@@ -30,5 +27,29 @@
 </div>
 
 <br>
+
+ <div class="radioSet">
+    <span class="radioSetLabel">Radio Button Set</span>
+    <ul>
+        <li><input type="radio" name="radioSet" id="radOne"/><label for="radOne">First</label></li>
+        <li><input type="radio" name="radioSet" id="radTwo" checked/><label for="radTwo">Second</label></li>
+        <li><input type="radio" name="radioSet" id="radThree"/><label for="radThree">Third</label></li>
+        <li><input type="radio" name="radioSet" id="radFour"/><label for="radFour">Fourth</label></li>
+    </ul>
+</div>
+
 <br>
-<p>more coming soon...</p>
+
+<div class="comboBox">
+    <button class="comboBoxLabel" onclick="comboBoxSelect(event, 'comboBoxOption')" onload="comboBoxSelect(event, 'comboBoxOption')">--Choose an option-- &#9660;</button>
+    <section class="comboBoxOptions">
+        <ul>
+            <li><input type="radio" name="comboBoxOption" id="comboDefault" value="--Choose an option--" checked onclick="comboBoxSelect(event, 'comboBoxOption')"/><label for="comboDefault"> ((Clear Choice))</label></li>
+            <li><input type="radio" name="comboBoxOption" id="combo1" value="1" onclick="comboBoxSelect(event, 'comboBoxOption')"/><label for="combo1">First</label></li>
+            <li><input type="radio" name="comboBoxOption" id="combo2" value="2" onclick="comboBoxSelect(event, 'comboBoxOption')"/><label for="combo2">Second</label></li>
+            <li><input type="radio" name="comboBoxOption" id="combo3" value="3" onclick="comboBoxSelect(event, 'comboBoxOption')"/><label for="combo3">Third</label></li>
+            <li><input type="radio" name="comboBoxOption" id="combo4" value="4" onclick="comboBoxSelect(event, 'comboBoxOption')"/><label for="combo4">Fourth</label></li>
+        </ul>
+    </section>
+</div>
+

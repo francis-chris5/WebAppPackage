@@ -4,6 +4,7 @@
     
     --default-app-size: 28em;
     --default-writing-color: #000000;
+    --default-accent-color: rgba(112, 152, 245, 0.3);
     --default-writing-size: 10pt;
     --default-padding: 1.2em;
     --default-border-radius: 2%;
@@ -11,14 +12,12 @@
     
     --general-border: solid 1px #e8e8e8;
     --section-border: double 8px #e8e8e8;
-    --general-border-radius: 2%;
+    --general-border-radius: 4%;
     
     --logo-width: 16px;
     --logo-right-margin: 1.5em;
     
     --button-back-color: rgba(243, 243, 243, 0.25);
-/*    --button-hover-color: #7098f5;*/
-    --button-hover-color: rgba(112, 152, 245, 0.3);
     --menu-back-color: #ffffff;
     --menu-button-padding: 0.3em;
     --menu-cursor: default;
@@ -68,7 +67,7 @@ button{
 }
 
 button:hover{
-    background-color: var(--button-hover-color);
+    background-color: var(--default-accent-color);
 }
 
 ul{
@@ -140,7 +139,7 @@ p{
 }
 
 .menu ul li a:hover{
-    background-color: var(--button-hover-color);
+    background-color: var(--default-accent-color);
     cursor: var(--menu-cursor);
 }
 
@@ -195,7 +194,7 @@ p{
 }
 
 .sidebarButton:hover{
-    background-color: var(--button-hover-color);
+    background-color: var(--default-accent-color);
 }
 
 .sidebarButton img{
@@ -214,7 +213,7 @@ p{
     height: var(--default-app-size);
     width: 75%;
     padding: var(--main-content-padding);
-/*    overflow: scroll;*/
+    overflow: scroll;
 }
 
 
@@ -264,7 +263,7 @@ p{
 
 
 .tabButton:hover{
-    background-color: var(--button-hover-color);
+    background-color: var(--default-accent-color);
 }
 
 
@@ -273,6 +272,7 @@ p{
 /*    height: var(--default-app-size);*/
     padding: var(--tab-panel-padding);
     border-top: var(--general-border);
+    border-radius: var(--default-border-radius);
     overflow: scroll;
 }
 
@@ -288,5 +288,60 @@ p{
     max-height: var(--list-box-max-height);
     width: var(--list-box-width);
     background-color: var(--list-box-color);
+    border-radius: var(--general-border-radius);
     overflow: auto;
 }
+
+
+
+
+
+
+/******************************  RADIO SET  **************************/
+.radioSet li{
+    display: inline;
+}
+
+.radioSet li:hover{
+    background-color: var(--default-accent-color);
+}
+
+.radioSet input[type=radio]{
+    accent-color: var(--default-accent-color);
+}
+
+
+
+
+
+/******************************  COMBO BOX  ******************************/
+.comboBox{
+    display: inline-block;
+    position: relative;
+}
+
+.comboBoxLabel{
+    background-color: var(--menu-back-color);
+}
+
+.comboBoxOptions{
+    display: none;
+    position: absolute;
+    background-color: var(--menu-back-color);
+    padding-left: 1.2em;
+    width: 12em;
+    z-index: 5;
+}
+
+
+.comboBoxOptions li:hover, .comboBoxOptions input[type=radio]:checked ~ label{
+    background-color: var(--default-accent-color);
+}
+
+.comboBoxOptions input[type=radio]{
+    opacity: 0;
+}
+
+
+
+

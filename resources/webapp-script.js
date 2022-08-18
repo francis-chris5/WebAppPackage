@@ -105,3 +105,27 @@ function listSelect(event){
 //        //right click, need to override browser's right-click to use this
 //    }
 }//end listSelect()
+
+
+
+
+///////////////////////////////////  COMBO BOX  /////////////////////////////////
+var optionsShowing = false;
+function comboBoxSelect(event, options){
+    if(optionsShowing){
+        document.getElementsByClassName('comboBoxOptions')[0].style.display = "none";
+        optionsShowing = false;
+    }
+    else{
+        document.getElementsByClassName('comboBoxOptions')[0].style.display = "block";
+        optionsShowing = true;
+    }
+    let choices = document.getElementsByName(options);
+    for(let i=0; i < choices.length; i++){
+        if(choices[i].checked){
+            console.log(choices[i].checked);
+            console.log(choices[i].value)
+            document.getElementsByClassName('comboBoxLabel')[0].innerHTML = choices[i].value + " &#9660;";
+        }
+    }
+}//end comboBoxSelect()
