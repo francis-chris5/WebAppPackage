@@ -1,4 +1,4 @@
-var localIP="http://localhost"; //change to machine IP at deployment
+var localIP = "http://localhost"; //change to machine IP at deployment
 var title = "WebApp Template";
 
 
@@ -125,7 +125,66 @@ function comboBoxSelect(event, options){
         if(choices[i].checked){
             console.log(choices[i].checked);
             console.log(choices[i].value)
-            document.getElementsByClassName('comboBoxLabel')[0].innerHTML = choices[i].value + " &#9660;";
+            document.getElementsByClassName('comboBoxLabel')[0].innerHTML = choices[i].value + " &nbsp; &nbsp; &#9044;";
         }
     }
 }//end comboBoxSelect()
+
+
+
+
+
+//////////////////////////////  TOGGLE BUTTONS  /////////////////////////////////
+function toggleCheckbutton(event, element){
+    let checked = false;
+    if(document.getElementById(element).innerHTML === ""){
+        checked = true;
+    }
+    else{
+        checked = false;
+    }
+    
+    if(checked){
+        document.getElementById(element).innerHTML = "&#x1F5F8;";
+    }
+    else{
+        document.getElementById(element).innerHTML = "";
+    }
+}//end toggleCheckButton()
+
+
+function toggleRadiobutton(event, radioset, element){
+    let radios = document.getElementsByName(radioset);
+    for(let i=0; i<radios.length; i++){
+        radios[i].innerHTML = "";
+    }
+    for(let i=0; i<radios.length; i++){
+        if(radios[i].id === element){
+            radios[i].innerHTML = "&#9864;";
+        }
+        else{
+            radios[i].innerHTML = "";
+        }
+    }
+    console.log(getRadio(radioset));
+}//end toggleRadiobutton()
+
+
+function getToggle(element){
+    if(document.getElementById(element).innerHTML === ""){
+        return false;
+    }
+    else{
+        return true;
+    }
+}//end getToggle()
+
+
+function getRadio(radioset){
+    let radios = document.getElementsByName(radioset);
+    for(let i=0; i<radios.length; i++){
+        if(radios[i].innerHTML != ""){
+            return radios[i].value;
+        }
+    }
+}//end getRadio()

@@ -41,7 +41,8 @@
 <br>
 
 <div class="comboBox">
-    <button class="comboBoxLabel" onclick="comboBoxSelect(event, 'comboBoxOption')" onload="comboBoxSelect(event, 'comboBoxOption')">--Choose an option-- &#9660;</button>
+    <span>ComboBox</span><br>
+    <button class="comboBoxLabel" onclick="comboBoxSelect(event, 'comboBoxOption')" onload="comboBoxSelect(event, 'comboBoxOption')">--Choose an option-- &#9044;</button>
     <section class="comboBoxOptions">
         <ul>
             <li><input type="radio" name="comboBoxOption" id="comboDefault" value="--Choose an option--" checked onclick="comboBoxSelect(event, 'comboBoxOption')"/><label for="comboDefault"> ((Clear Choice))</label></li>
@@ -51,5 +52,16 @@
             <li><input type="radio" name="comboBoxOption" id="combo4" value="4" onclick="comboBoxSelect(event, 'comboBoxOption')"/><label for="combo4">Fourth</label></li>
         </ul>
     </section>
+</div>
+
+
+
+<div class="toggleButtons">
+    <span class="toggleButtonsLabel">Toggle Buttons</span>
+    <ul>
+        <li><button class="checkbutton" id="inputCheckbutton" onclick="toggleCheckbutton(event, 'inputCheckbutton' )"></button><label class="checkbuttonLabel" for="inputCheckbutton">Stylable Check Button</label></li>
+        <li><button class="radiobutton" id="inputRadiobutton1" name="inputRadioButton" onclick="toggleRadiobutton(event, 'inputRadioButton', 'inputRadiobutton1' )" value="radio1">&#9864;</button><label class="radiobuttonLabel" for="inputRadiobutton1">Stylable Radio Button 1</label></li>
+        <li><button class="radiobutton" id="inputRadiobutton2" name="inputRadioButton" onclick="toggleRadiobutton(event, 'inputRadioButton', 'inputRadiobutton2' )" value="radio2"></button><label class="radiobuttonLabel" for="inputRadiobutton2">Stylable Radio Button 2</label></li>
+    </ul>
 </div>
 
